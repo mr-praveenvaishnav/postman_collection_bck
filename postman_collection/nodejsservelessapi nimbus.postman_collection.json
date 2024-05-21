@@ -1,0 +1,688 @@
+{
+	"info": {
+		"_postman_id": "b1441eda-6e5c-4ae0-a1f4-cde76ea1eb29",
+		"name": "nodejsservelessapi nimbus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33604064"
+	},
+	"item": [
+		{
+			"name": "ndr",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"courier_id\" :287,\r\n\"action\": \"reattempt\",\r\n\"awb_number\":\"19041559315045\", \r\n\"re_attempt_date_time\":1712793600,\r\n\"change_address\":\"\",\r\n\"change_phone\":\"\",\r\n\"remarks\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/ndr",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"ndr"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"request_id\" : \"ndr_request\",\r\n\"courier_id\" :287,\r\n\"action\": \"reattempt\",\r\n\"comments\": \"The Byer does not want the product\",\r\n\"awb_number\":\"19041558055034\", \r\n\"re_attempt_date_time\":1712793600,\r\n\"Api_type\":\"s\",\r\n\"phone\":1712793600,\r\n\"address\":1712793600,\r\n\"address_2\":1712793600,\r\n\"comments\":1712793600,\r\n\"proof_audio\":1712793600,\r\n\"proof_image\":1712793600,\r\n\"remarks\":1712793600\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/ndr",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"ndr"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shipment create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courier_id\": \"214\",\r\n    \"consignee\": {\r\n        \"company\": \"\",\r\n        \"first_name\": \"test_test\",\r\n        \"last_name\": \"\",\r\n        \"address\": \"bakers naya bazaar pithoragarh0237subhash chowk naya pithoragarh0303152 152\",\r\n        \"address_2\": \"\",\r\n        \"city\": \"Pithoragarh\",\r\n        \"state\": \"Uttarakhand\",\r\n        \"pincode\": \"421302\",\r\n        \"gst\": \"\",\r\n        \"latitude\": \"\",\r\n        \"longitude\": \"\",\r\n        \"phone\": \"9898989898\"\r\n    },\r\n    \"pickup\": {\r\n        \"hub_name\": \"\",\r\n        \"company\": \"\",\r\n        \"first_name\": \"test_test\",\r\n        \"last_name\": \"\",\r\n        \"address\": \"Oddity health care  shop no 3 Trishul symphony  Sector 19 Kharghar  Murbi village  Blinkit warehouse\",\r\n        \"address_2\": \"\",\r\n        \"city\": \"Mumbai\",\r\n        \"state\": \"Maharashtra\",\r\n        \"pincode\": \"421302\",\r\n        \"latitude\": \"\",\r\n        \"longitude\": \"\",\r\n        \"phone\": \"9898989898\"\r\n    },\r\n    \"rto\": {\r\n        \"hub_name\": \"\",\r\n        \"company\": \"\",\r\n        \"first_name\": \"test_test\",\r\n        \"last_name\": \"\",\r\n        \"address\": \"Oddity health care  shop no 3 Trishul symphony  Sector 19 Kharghar  Murbi village  Blinkit warehouse\",\r\n        \"address_2\": \"\",\r\n        \"city\": \"Mumbai\",\r\n        \"state\": \"Maharashtra\",\r\n        \"pincode\": \"421302\",\r\n        \"gst\": \"\",\r\n        \"latitude\": \"\",\r\n        \"longitude\": \"\",\r\n        \"phone\": \"8851609414\"\r\n    },\r\n    \"order_type\": \"B2C\",\r\n    \"order_number\": \"test_43219\",\r\n    \"ref_id\": \"test_12341025\",\r\n    \"payment_type\": \"prepaid\",\r\n    \"weight\": 235,\r\n    \"length\": 17,\r\n    \"breadth\": 12,\r\n    \"height\": 8,\r\n    \"order_amount\": 99,\r\n    \"items\": [\r\n        {\r\n            \"sku\": \"d99922bc 1a37 11ec 9621 0242ac130002\",\r\n            \"title\": \"TES ALP 60 wellness\",\r\n            \"price\": 99,\r\n            \"qty\": \"1\",\r\n            \"hsn\": \"\"\r\n        }\r\n    ],\r\n    \"extra_info\": {\r\n        \"dg_order\": true,\r\n        \"essential_order\": \"N\",\r\n        \"invoice_value\": \"0.0\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/shipment/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"shipment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shipment create _oldrequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courier_id\": \"214\",\r\n    \"consignee\": {\r\n        \"company\": \"\",\r\n        \"first_name\": \"test_test\",\r\n        \"last_name\": \"\",\r\n        \"address\": \"bakers naya bazaar pithoragarh0237subhash chowk naya pithoragarh0303152 152\",\r\n        \"address_2\": \"\",\r\n        \"city\": \"Pithoragarh\",\r\n        \"state\": \"Uttarakhand\",\r\n        \"pincode\": \"421302\",\r\n        \"gst\": \"\",\r\n        \"latitude\": \"\",\r\n        \"longitude\": \"\",\r\n        \"phone\": \"9898989898\"\r\n    },\r\n    \"pickup\": {\r\n        \"hub_name\": \"\",\r\n        \"company\": \"\",\r\n        \"first_name\": \"test_test\",\r\n        \"last_name\": \"\",\r\n        \"address\": \"Oddity health care  shop no 3 Trishul symphony  Sector 19 Kharghar  Murbi village  Blinkit warehouse\",\r\n        \"address_2\": \"\",\r\n        \"city\": \"Mumbai\",\r\n        \"state\": \"Maharashtra\",\r\n        \"pincode\": \"421302\",\r\n        \"latitude\": \"\",\r\n        \"longitude\": \"\",\r\n        \"phone\": \"9898989898\"\r\n    },\r\n    \"rto\": {\r\n        \"hub_name\": \"\",\r\n        \"company\": \"\",\r\n        \"first_name\": \"test_test\",\r\n        \"last_name\": \"\",\r\n        \"address\": \"Oddity health care  shop no 3 Trishul symphony  Sector 19 Kharghar  Murbi village  Blinkit warehouse\",\r\n        \"address_2\": \"\",\r\n        \"city\": \"Mumbai\",\r\n        \"state\": \"Maharashtra\",\r\n        \"pincode\": \"421302\",\r\n        \"gst\": \"\",\r\n        \"latitude\": \"\",\r\n        \"longitude\": \"\",\r\n        \"phone\": \"8851609414\"\r\n    },\r\n    \"order_type\": \"B2C\",\r\n    \"order_number\": \"test_43219\",\r\n    \"ref_id\": \"test_12341025\",\r\n    \"payment_type\": \"prepaid\",\r\n    \"weight\": 235,\r\n    \"length\": 17,\r\n    \"breadth\": 12,\r\n    \"height\": 8,\r\n    \"order_amount\": 99,\r\n    \"items\": [\r\n        {\r\n            \"sku\": \"d99922bc 1a37 11ec 9621 0242ac130002\",\r\n            \"title\": \"TES ALP 60 wellness\",\r\n            \"price\": 99,\r\n            \"qty\": \"1\",\r\n            \"hsn\": \"\"\r\n        }\r\n    ],\r\n    \"extra_info\": {\r\n        \"dg_order\": true,\r\n        \"essential_order\": \"N\",\r\n        \"invoice_value\": \"0.0\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/shipment/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"shipment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shipment pickup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courier_id\": \"214\",\r\n    \"consignee\": {\r\n        \"company\": \"\",\r\n        \"first_name\": \"test_test\",\r\n        \"last_name\": \"\",\r\n        \"address\": \"bakers naya bazaar pithoragarh0237subhash chowk naya pithoragarh0303152 152\",\r\n        \"address_2\": \"\",\r\n        \"city\": \"Pithoragarh\",\r\n        \"state\": \"Uttarakhand\",\r\n        \"pincode\": \"421302\",\r\n        \"gst\": \"\",\r\n        \"latitude\": \"\",\r\n        \"longitude\": \"\",\r\n        \"phone\": \"9898989898\"\r\n    },\r\n    \"pickup\": {\r\n        \"hub_name\": \"\",\r\n        \"company\": \"\",\r\n        \"first_name\": \"test_test\",\r\n        \"last_name\": \"\",\r\n        \"address\": \"Oddity health care  shop no 3 Trishul symphony  Sector 19 Kharghar  Murbi village  Blinkit warehouse\",\r\n        \"address_2\": \"\",\r\n        \"city\": \"Mumbai\",\r\n        \"state\": \"Maharashtra\",\r\n        \"pincode\": \"421302\",\r\n        \"latitude\": \"\",\r\n        \"longitude\": \"\",\r\n        \"phone\": \"9898989898\"\r\n    },\r\n    \"rto\": {\r\n        \"hub_name\": \"\",\r\n        \"company\": \"\",\r\n        \"first_name\": \"test_test\",\r\n        \"last_name\": \"\",\r\n        \"address\": \"Oddity health care  shop no 3 Trishul symphony  Sector 19 Kharghar  Murbi village  Blinkit warehouse\",\r\n        \"address_2\": \"\",\r\n        \"city\": \"Mumbai\",\r\n        \"state\": \"Maharashtra\",\r\n        \"pincode\": \"421302\",\r\n        \"gst\": \"\",\r\n        \"latitude\": \"\",\r\n        \"longitude\": \"\",\r\n        \"phone\": \"8851609414\"\r\n    },\r\n    \"order_type\": \"B2C\",\r\n    \"order_number\": \"test_43219\",\r\n    \"ref_id\": \"test_12341025\",\r\n    \"payment_type\": \"prepaid\",\r\n    \"weight\": 235,\r\n    \"length\": 17,\r\n    \"breadth\": 12,\r\n    \"height\": 8,\r\n    \"order_amount\": 99,\r\n    \"items\": [\r\n        {\r\n            \"sku\": \"d99922bc 1a37 11ec 9621 0242ac130002\",\r\n            \"title\": \"TES ALP 60 wellness\",\r\n            \"price\": 99,\r\n            \"qty\": \"1\",\r\n            \"hsn\": \"\"\r\n        }\r\n    ],\r\n    \"extra_info\": {\r\n        \"dg_order\": true,\r\n        \"essential_order\": \"N\",\r\n        \"invoice_value\": \"0.0\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/shipment/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"shipment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shipment track",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courier_id\": \"289\",\r\n    \"awb_numbers\": [\"10264091412\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/shipment/shipment/track",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"shipment",
+						"shipment",
+						"track"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ekart shipment live",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ0OTk4MTIsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE2NTQ0NjQzLCJqdGkiOiJKbFFqTGpkdzhlVGFEa1ZlIiwiaWF0IjoxNzE1NjgwNjQzLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNTY4MDY0MywiY2lkIjozMjE1Mzg3LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.z4mR063p2VsaoUR9EUy0fXTXNrviQ1qru-iBJ_yrCxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer \neyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ0OTk4MTIsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE2NDc0NjAzLCJqdGkiOiJDQm1mbndOTzdIbnM0blhNIiwiaWF0IjoxNzE1NjEwNjAzLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNTYxMDYwMywiY2lkIjozMjE1Mzg3LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.qx8jArzgVu-e0aA9kMucM2CF0o7yqsZrVV0jvb_R6cE\nresponse1 track shipment eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ0OTk4MTIsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE2NDc0NjAzLCJqdGkiOiJDQm1mbndOTzdIbnM0blhNIiwiaWF0IjoxNzE1NjEwNjAzLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNTYxMDYwMywiY2lkIjozMjE1Mzg3LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.qx8jArzgVu-e0aA9kMucM2CF0o7yqsZrVV0jvb_R6c"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apiv2.shiprocket.in/v1/external/courier/track/awb/10264091412",
+					"protocol": "https",
+					"host": [
+						"apiv2",
+						"shiprocket",
+						"in"
+					],
+					"path": [
+						"v1",
+						"external",
+						"courier",
+						"track",
+						"awb",
+						"10264091412"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ekart shipment gernate token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ0OTk4MTIsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE2NTQ0NjQzLCJqdGkiOiJKbFFqTGpkdzhlVGFEa1ZlIiwiaWF0IjoxNzE1NjgwNjQzLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNTY4MDY0MywiY2lkIjozMjE1Mzg3LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.z4mR063p2VsaoUR9EUy0fXTXNrviQ1qru-iBJ_yrCxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer \neyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ0OTk4MTIsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE2NDc0NjAzLCJqdGkiOiJDQm1mbndOTzdIbnM0blhNIiwiaWF0IjoxNzE1NjEwNjAzLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNTYxMDYwMywiY2lkIjozMjE1Mzg3LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.qx8jArzgVu-e0aA9kMucM2CF0o7yqsZrVV0jvb_R6cE\nresponse1 track shipment eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ0OTk4MTIsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE2NDc0NjAzLCJqdGkiOiJDQm1mbndOTzdIbnM0blhNIiwiaWF0IjoxNzE1NjEwNjAzLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNTYxMDYwMywiY2lkIjozMjE1Mzg3LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.qx8jArzgVu-e0aA9kMucM2CF0o7yqsZrVV0jvb_R6c"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apiv2.shiprocket.in/v1/external/courier/track/awb/10264091412",
+					"protocol": "https",
+					"host": [
+						"apiv2",
+						"shiprocket",
+						"in"
+					],
+					"path": [
+						"v1",
+						"external",
+						"courier",
+						"track",
+						"awb",
+						"10264091412"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dtdc  token genration",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ0OTk4MTIsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE2NTQ0NjQzLCJqdGkiOiJKbFFqTGpkdzhlVGFEa1ZlIiwiaWF0IjoxNzE1NjgwNjQzLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNTY4MDY0MywiY2lkIjozMjE1Mzg3LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.z4mR063p2VsaoUR9EUy0fXTXNrviQ1qru-iBJ_yrCxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer \neyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ0OTk4MTIsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE2NDc0NjAzLCJqdGkiOiJDQm1mbndOTzdIbnM0blhNIiwiaWF0IjoxNzE1NjEwNjAzLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNTYxMDYwMywiY2lkIjozMjE1Mzg3LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.qx8jArzgVu-e0aA9kMucM2CF0o7yqsZrVV0jvb_R6cE\nresponse1 track shipment eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ0OTk4MTIsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE2NDc0NjAzLCJqdGkiOiJDQm1mbndOTzdIbnM0blhNIiwiaWF0IjoxNzE1NjEwNjAzLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNTYxMDYwMywiY2lkIjozMjE1Mzg3LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.qx8jArzgVu-e0aA9kMucM2CF0o7yqsZrVV0jvb_R6c"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blktracksvc.dtdc.com/dtdc-api/api/dtdc/authenticate",
+					"protocol": "https",
+					"host": [
+						"blktracksvc",
+						"dtdc",
+						"com"
+					],
+					"path": [
+						"dtdc-api",
+						"api",
+						"dtdc",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dtdc  token tracking",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ0OTk4MTIsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE2NTQ0NjQzLCJqdGkiOiJKbFFqTGpkdzhlVGFEa1ZlIiwiaWF0IjoxNzE1NjgwNjQzLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNTY4MDY0MywiY2lkIjozMjE1Mzg3LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.z4mR063p2VsaoUR9EUy0fXTXNrviQ1qru-iBJ_yrCxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer \neyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ0OTk4MTIsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE2NDc0NjAzLCJqdGkiOiJDQm1mbndOTzdIbnM0blhNIiwiaWF0IjoxNzE1NjEwNjAzLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNTYxMDYwMywiY2lkIjozMjE1Mzg3LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.qx8jArzgVu-e0aA9kMucM2CF0o7yqsZrVV0jvb_R6cE\nresponse1 track shipment eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ0OTk4MTIsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE2NDc0NjAzLCJqdGkiOiJDQm1mbndOTzdIbnM0blhNIiwiaWF0IjoxNzE1NjEwNjAzLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNTYxMDYwMywiY2lkIjozMjE1Mzg3LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.qx8jArzgVu-e0aA9kMucM2CF0o7yqsZrVV0jvb_R6c"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apiv2.shiprocket.in/v1/external/courier/track/awb/10264091412",
+					"protocol": "https",
+					"host": [
+						"apiv2",
+						"shiprocket",
+						"in"
+					],
+					"path": [
+						"v1",
+						"external",
+						"courier",
+						"track",
+						"awb",
+						"10264091412"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shiprocket tracking_1 Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ0OTk4MTIsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE2NTQ0NjQzLCJqdGkiOiJKbFFqTGpkdzhlVGFEa1ZlIiwiaWF0IjoxNzE1NjgwNjQzLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNTY4MDY0MywiY2lkIjozMjE1Mzg3LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.z4mR063p2VsaoUR9EUy0fXTXNrviQ1qru-iBJ_yrCxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer \neyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ0OTk4MTIsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE2NDc0NjAzLCJqdGkiOiJDQm1mbndOTzdIbnM0blhNIiwiaWF0IjoxNzE1NjEwNjAzLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNTYxMDYwMywiY2lkIjozMjE1Mzg3LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.qx8jArzgVu-e0aA9kMucM2CF0o7yqsZrVV0jvb_R6cE\nresponse1 track shipment eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ0OTk4MTIsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzE2NDc0NjAzLCJqdGkiOiJDQm1mbndOTzdIbnM0blhNIiwiaWF0IjoxNzE1NjEwNjAzLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxNTYxMDYwMywiY2lkIjozMjE1Mzg3LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.qx8jArzgVu-e0aA9kMucM2CF0o7yqsZrVV0jvb_R6c"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apiv2.shiprocket.in/v1/external/courier/track/awb/10264091412",
+					"protocol": "https",
+					"host": [
+						"apiv2",
+						"shiprocket",
+						"in"
+					],
+					"path": [
+						"v1",
+						"external",
+						"courier",
+						"track",
+						"awb",
+						"10264091412"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shiprocket Generate Token Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"tech@sourceinfi.com\",\r\n    \"password\": \"Shifto@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apiv2.shiprocket.in/v1/external/auth/login",
+					"protocol": "https",
+					"host": [
+						"apiv2",
+						"shiprocket",
+						"in"
+					],
+					"path": [
+						"v1",
+						"external",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bluedart_doc_status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courier_id\": \"289\",\r\n    \"awb_numbers\": [\"10264091412\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/shipment/shipment/track",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"shipment",
+						"shipment",
+						"track"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shipment cancel",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courier_id\":\"214\",\r\n    \"awb_number\":\"77060780624\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/shipment/cancel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"shipment",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ndr",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courier_id\": \"214\",\r\n    \"awb_number\": \"77950751406\",\r\n    \"prefer_time\": \"\",\r\n    \"time_slot\": \"\",\r\n    \"mobile_no\": \"\",\r\n    \"change_address_1\": \"Udyog Vihar 5, Sector 28, Gurgaon\",\r\n    \"change_phone\": \"9628164726\",\r\n    \"action\": \"reattempt\",\r\n    \"re_attempt_date_time\": 1714397471,\r\n    \"api_type\": \"S\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://sourceinfi.ap-south-1.elasticbeanstalk.com/api/v1/ndr",
+					"protocol": "http",
+					"host": [
+						"sourceinfi",
+						"ap-south-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"ndr"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shipment ndr",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"request_id\" : \"ndr_request\",\r\n\"courier_id\" :287,\r\n\"action\": \"reattempt\",\r\n\"comments\": \"The Byer does not want the product\",\r\n\"awb_number\":\"19041558055034\", \r\n\"re_attempt_date_time\":1712793600,\r\n\"Api_type\":\"s\",\r\n\"phone\":1712793600,\r\n\"address\":1712793600,\r\n\"address_2\":1712793600,\r\n\"comments\":1712793600,\r\n\"proof_audio\":1712793600,\r\n\"proof_image\":1712793600,\r\n\"remarks\":1712793600\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/shipment/cancel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"shipment",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ0OTk4MzAsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzEzNTM3MDAyLCJqdGkiOiJabXdnN1VyRktyMEN6cnJ2IiwiaWF0IjoxNzEyNjczMDAyLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTcxMjY3MzAwMiwiY2lkIjo0MzYwNTcwLCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.fmeyQ-HAoBN25ej_Co_namatZkh6HMvSlfa4ootfJpE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apiv2.shiprocket.in/v1/external/ndr/19041559315045",
+					"protocol": "https",
+					"host": [
+						"apiv2",
+						"shiprocket",
+						"in"
+					],
+					"path": [
+						"v1",
+						"external",
+						"ndr",
+						"19041559315045"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

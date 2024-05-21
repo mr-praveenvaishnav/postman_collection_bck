@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "2c74b154-6978-459d-bcce-5aa1ce723c73",
+		"name": "1688",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33604064"
+	},
+	"item": [
+		{
+			"name": "GetProductByURL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"url\": \"https://detail.1688.com/offer/665171544514.html\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.tmapi.top/1688/v2/item_detail_by_url?apiToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImFtaXQiLCJDb21pZCI6bnVsbCwiUm9sZWlkIjpudWxsLCJpc3MiOiJ0bWFwaSIsInN1YiI6ImFtaXQiLCJhdWQiOlsiIl0sImlhdCI6MTcxNTA2ODA3OX0.34naHCms17eMkGg-tDbAMcsTYocpArCBcELip451B7Y",
+					"protocol": "http",
+					"host": [
+						"api",
+						"tmapi",
+						"top"
+					],
+					"path": [
+						"1688",
+						"v2",
+						"item_detail_by_url"
+					],
+					"query": [
+						{
+							"key": "apiToken",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImFtaXQiLCJDb21pZCI6bnVsbCwiUm9sZWlkIjpudWxsLCJpc3MiOiJ0bWFwaSIsInN1YiI6ImFtaXQiLCJhdWQiOlsiIl0sImlhdCI6MTcxNTA2ODA3OX0.34naHCms17eMkGg-tDbAMcsTYocpArCBcELip451B7Y"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ecommerce trans",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"url\": \"https://detail.1688.com/offer/665171544514.html\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.tmapi.top/1688/v2/item_detail_by_url?apiToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImFtaXQiLCJDb21pZCI6bnVsbCwiUm9sZWlkIjpudWxsLCJpc3MiOiJ0bWFwaSIsInN1YiI6ImFtaXQiLCJhdWQiOlsiIl0sImlhdCI6MTcxNTA2ODA3OX0.34naHCms17eMkGg-tDbAMcsTYocpArCBcELip451B7Y",
+					"protocol": "http",
+					"host": [
+						"api",
+						"tmapi",
+						"top"
+					],
+					"path": [
+						"1688",
+						"v2",
+						"item_detail_by_url"
+					],
+					"query": [
+						{
+							"key": "apiToken",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImFtaXQiLCJDb21pZCI6bnVsbCwiUm9sZWlkIjpudWxsLCJpc3MiOiJ0bWFwaSIsInN1YiI6ImFtaXQiLCJhdWQiOlsiIl0sImlhdCI6MTcxNTA2ODA3OX0.34naHCms17eMkGg-tDbAMcsTYocpArCBcELip451B7Y"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ecommerce item_detail id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"url\": \"https://detail.1688.com/offer/665171544514.html\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.tmapi.top/1688/v2/item_detail_by_url?apiToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImFtaXQiLCJDb21pZCI6bnVsbCwiUm9sZWlkIjpudWxsLCJpc3MiOiJ0bWFwaSIsInN1YiI6ImFtaXQiLCJhdWQiOlsiIl0sImlhdCI6MTcxNTA2ODA3OX0.34naHCms17eMkGg-tDbAMcsTYocpArCBcELip451B7Y",
+					"protocol": "http",
+					"host": [
+						"api",
+						"tmapi",
+						"top"
+					],
+					"path": [
+						"1688",
+						"v2",
+						"item_detail_by_url"
+					],
+					"query": [
+						{
+							"key": "apiToken",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImFtaXQiLCJDb21pZCI6bnVsbCwiUm9sZWlkIjpudWxsLCJpc3MiOiJ0bWFwaSIsInN1YiI6ImFtaXQiLCJhdWQiOlsiIl0sImlhdCI6MTcxNTA2ODA3OX0.34naHCms17eMkGg-tDbAMcsTYocpArCBcELip451B7Y"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

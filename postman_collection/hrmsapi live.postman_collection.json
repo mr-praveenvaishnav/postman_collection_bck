@@ -1,0 +1,790 @@
+{
+	"info": {
+		"_postman_id": "aae11784-f546-4e8f-b5d6-2323f130280a",
+		"name": "hrmsapi live",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33604064"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"user@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hrmsapi.zanzeo.in/api/login",
+					"protocol": "https",
+					"host": [
+						"hrmsapi",
+						"zanzeo",
+						"in"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}api/register",
+					"host": [
+						"{{baseurl}}api"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forget password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/login",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add employee basic details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzA5ODExMjc0LCJleHAiOjE3MTIyMzA0NzQsIm5iZiI6MTcwOTgxMTI3NCwianRpIjoiSjIyTzJIZTR6Rmg0SWp4WSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.hjDQWcNoMVj9yjzkW_i1nGyq8M9AFdiHanc4k3AMWfE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"empid\":\"1003\",\r\n    \"attendance_time\":\"11:05:01\",\r\n    \"attendance_date\":\"2020-02-02\",\r\n    \"status\":\"present\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/admin/add/employeedetails",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"add",
+						"employeedetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "document add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2hybXNhcGkuemFuemVvLmluL2FwaS9sb2dpbiIsImlhdCI6MTcxMDQwOTM5MywiZXhwIjoxNzEyODI4NTkzLCJuYmYiOjE3MTA0MDkzOTMsImp0aSI6Im9UaHBaTTdhSTJ2cjkwTFQiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.myf8crGbtfkLWKY50wW2xSb3RuJRRii6a1lp3gY5OSw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "empid",
+							"value": "1001",
+							"type": "text"
+						},
+						{
+							"key": "document_id",
+							"value": "121",
+							"type": "text"
+						},
+						{
+							"key": "document_type",
+							"value": "adhar",
+							"type": "text"
+						},
+						{
+							"key": "attechment",
+							"type": "file",
+							"src": "postman-cloud:///1eee1fc4-022b-4a50-9055-b8b7fa41e21b"
+						},
+						{
+							"key": "document_number",
+							"value": "32323",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://hrmsapi.zanzeo.in/api/user/add/document",
+					"protocol": "https",
+					"host": [
+						"hrmsapi",
+						"zanzeo",
+						"in"
+					],
+					"path": [
+						"api",
+						"user",
+						"add",
+						"document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "document add Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2hybXNhcGkuemFuemVvLmluL2FwaS9sb2dpbiIsImlhdCI6MTcxMDQwOTM5MywiZXhwIjoxNzEyODI4NTkzLCJuYmYiOjE3MTA0MDkzOTMsImp0aSI6Im9UaHBaTTdhSTJ2cjkwTFQiLCJzdWIiOiIyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.myf8crGbtfkLWKY50wW2xSb3RuJRRii6a1lp3gY5OSw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"empid\":\"1003\",\r\n    \"attendance_time\":\"11:05:01\",\r\n    \"attendance_date\":\"2020-02-02\",\r\n    \"status\":\"present\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hrmsapi.zanzeo.in/api/user/get/document/1001",
+					"protocol": "https",
+					"host": [
+						"hrmsapi",
+						"zanzeo",
+						"in"
+					],
+					"path": [
+						"api",
+						"user",
+						"get",
+						"document",
+						"1001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get employee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/admin/get/employee",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"get",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add by user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzA5ODEyNTMzLCJleHAiOjE3MTIyMzE3MzMsIm5iZiI6MTcwOTgxMjUzMywianRpIjoiQVl6VG9FcmRONzJ6Q2FMaiIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.pEofNJBv2mzHRjgXdbx5qxStddZ5DpELw1xWVD4LTDo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/add/attendance",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"add",
+						"attendance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changepassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/admin/changepassword",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"changepassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzA5NTU4MTQzLCJleHAiOjE3MTE5NzczNDMsIm5iZiI6MTcwOTU1ODE0MywianRpIjoiMDFQZnRIcjdrT1NiZm9GQSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Jsx_wKikn7OCO2cb4bAaesIqWMjjWPYYFN4DbWHmAYI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"first_name\":\"ankit\",\r\n      \"last_name\": \"kumar\",\r\n      \"email\":\"a@gmail.com\",\r\n       \"phone\":\"9874563201\",\r\n       \"empid\":\"1006\",\r\n       \"dob\":\"1999-02-02\",\r\n        \"role\":\"user\",\r\n        \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/admin/add/employee",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"add",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add experince",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzA5NTU4MTQzLCJleHAiOjE3MTE5NzczNDMsIm5iZiI6MTcwOTU1ODE0MywianRpIjoiMDFQZnRIcjdrT1NiZm9GQSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Jsx_wKikn7OCO2cb4bAaesIqWMjjWPYYFN4DbWHmAYI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"first_name\":\"ankit\",\r\n      \"last_name\": \"kumar\",\r\n      \"email\":\"a@gmail.com\",\r\n       \"phone\":\"9874563201\",\r\n       \"empid\":\"1006\",\r\n       \"dob\":\"1999-02-02\",\r\n        \"role\":\"user\",\r\n        \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/admin/add/employee/experince",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"add",
+						"employee",
+						"experince"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get employee by admin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzA5NTU4MTQzLCJleHAiOjE3MTE5NzczNDMsIm5iZiI6MTcwOTU1ODE0MywianRpIjoiMDFQZnRIcjdrT1NiZm9GQSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Jsx_wKikn7OCO2cb4bAaesIqWMjjWPYYFN4DbWHmAYI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"first_name\":\"ankit\",\r\n      \"last_name\": \"kumar\",\r\n      \"email\":\"a@gmail.com\",\r\n       \"phone\":\"9874563201\",\r\n       \"empid\":\"1006\",\r\n       \"dob\":\"1999-02-02\",\r\n        \"role\":\"user\",\r\n        \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/admin/get/employee/experince/1001",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"get",
+						"employee",
+						"experince",
+						"1001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get attendance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzA5NjIxMjEyLCJleHAiOjE3MTIwNDA0MTIsIm5iZiI6MTcwOTYyMTIxMiwianRpIjoiWXdKbmhKT3MyaGhtdUg2ZyIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.EIixdAm7MOGstbJRnNKeoa798D3YPeX9qCCnLzWGKZY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"first_name\":\"ankit\",\r\n      \"last_name\": \"kumar\",\r\n      \"email\":\"a@gmail.com\",\r\n       \"phone\":\"9874563201\",\r\n       \"empid\":\"1006\",\r\n       \"dob\":\"1999-02-02\",\r\n        \"role\":\"user\",\r\n        \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/employee/leave/request",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"employee",
+						"leave",
+						"request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "leave",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzA5NjIxMjEyLCJleHAiOjE3MTIwNDA0MTIsIm5iZiI6MTcwOTYyMTIxMiwianRpIjoiWXdKbmhKT3MyaGhtdUg2ZyIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.EIixdAm7MOGstbJRnNKeoa798D3YPeX9qCCnLzWGKZY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"first_name\":\"ankit\",\r\n      \"last_name\": \"kumar\",\r\n      \"email\":\"a@gmail.com\",\r\n       \"phone\":\"9874563201\",\r\n       \"empid\":\"1006\",\r\n       \"dob\":\"1999-02-02\",\r\n        \"role\":\"user\",\r\n        \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/employee/leave/request",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"employee",
+						"leave",
+						"request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add leave",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzA5NjIxMjEyLCJleHAiOjE3MTIwNDA0MTIsIm5iZiI6MTcwOTYyMTIxMiwianRpIjoiWXdKbmhKT3MyaGhtdUg2ZyIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.EIixdAm7MOGstbJRnNKeoa798D3YPeX9qCCnLzWGKZY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"first_name\":\"ankit\",\r\n      \"last_name\": \"kumar\",\r\n      \"email\":\"a@gmail.com\",\r\n       \"phone\":\"9874563201\",\r\n       \"empid\":\"1006\",\r\n       \"dob\":\"1999-02-02\",\r\n        \"role\":\"user\",\r\n        \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/employee/leave/request",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"employee",
+						"leave",
+						"request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make attendance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzA5NjIxMjEyLCJleHAiOjE3MTIwNDA0MTIsIm5iZiI6MTcwOTYyMTIxMiwianRpIjoiWXdKbmhKT3MyaGhtdUg2ZyIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.EIixdAm7MOGstbJRnNKeoa798D3YPeX9qCCnLzWGKZY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"first_name\":\"ankit\",\r\n      \"last_name\": \"kumar\",\r\n      \"email\":\"a@gmail.com\",\r\n       \"phone\":\"9874563201\",\r\n       \"empid\":\"1006\",\r\n       \"dob\":\"1999-02-02\",\r\n        \"role\":\"user\",\r\n        \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/employee/leave/request",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"employee",
+						"leave",
+						"request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "late coming attendance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzA5NjIxMjEyLCJleHAiOjE3MTIwNDA0MTIsIm5iZiI6MTcwOTYyMTIxMiwianRpIjoiWXdKbmhKT3MyaGhtdUg2ZyIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.EIixdAm7MOGstbJRnNKeoa798D3YPeX9qCCnLzWGKZY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"first_name\":\"ankit\",\r\n      \"last_name\": \"kumar\",\r\n      \"email\":\"a@gmail.com\",\r\n       \"phone\":\"9874563201\",\r\n       \"empid\":\"1006\",\r\n       \"dob\":\"1999-02-02\",\r\n        \"role\":\"user\",\r\n        \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/employee/leave/request",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"employee",
+						"leave",
+						"request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzA5ODA0Mjc5LCJleHAiOjE3MTIyMjM0NzksIm5iZiI6MTcwOTgwNDI3OSwianRpIjoiQjJxRG9ZSUt1ek5weFZ2NiIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.8v-L6545fl3TYpaNwXOcNlldO86-J_hc1VULJxdHjKg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n//     \"previous_company\": \"smc\",\r\n//             \"position\": \"DET\",\r\n//             \"start_date\": \"2020-02-02\",\r\n//             \"end_date\": \"2024-04-05\",\r\n//             \"total_experince\": 2,\r\n// }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/admin/get/employee/experince/1001",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"admin",
+						"get",
+						"employee",
+						"experince",
+						"1001"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "https://hrmsapi.zanzeo.in/",
+			"type": "string"
+		}
+	]
+}

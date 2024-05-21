@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "8859e955-b76f-40a7-925f-3a5c0c0fb90f",
+		"name": "Nimbus-Node live",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33604064"
+	},
+	"item": [
+		{
+			"name": "Shipment",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"courier_id\": \"230\",\n    \"consignee\": {\n        \"company\": \"\",\n        \"first_name\": \"test_test\",\n        \"last_name\": \"\",\n        \"address\": \"bakers naya bazaar pithoragarh0237subhash chowk naya pithoragarh0303152 152\",\n        \"address_2\": \"\",\n        \"city\": \"Pithoragarh\",\n        \"state\": \"Uttarakhand\",\n        \"pincode\": \"122002\",\n        \"gst\": \"\",\n        \"latitude\": \"\",\n        \"longitude\": \"\",\n        \"phone\": \"9898989898\"\n    },\n    \"pickup\": {\n        \"hub_name\": \"\",\n        \"company\": \"\",\n        \"first_name\": \"test_test\",\n        \"last_name\": \"\",\n        \"address\": \"Oddity health care  shop no 3 Trishul symphony  Sector 19 Kharghar  Murbi village  Blinkit warehouse\",\n        \"address_2\": \"\",\n        \"city\": \"Mumbai\",\n        \"state\": \"Maharashtra\",\n        \"pincode\": \"122001\",\n        \"latitude\": \"\",\n        \"longitude\": \"\",\n        \"phone\": \"9898989898\"\n    },\n    \"rto\": {\n        \"hub_name\": \"\",\n        \"company\": \"\",\n        \"first_name\": \"test_test\",\n        \"last_name\": \"\",\n        \"address\": \"Oddity health care  shop no 3 Trishul symphony  Sector 19 Kharghar  Murbi village  Blinkit warehouse\",\n        \"address_2\": \"\",\n        \"city\": \"Mumbai\",\n        \"state\": \"Maharashtra\",\n        \"pincode\": \"122001\",\n        \"gst\": \"\",\n        \"latitude\": \"\",\n        \"longitude\": \"\",\n        \"phone\": \"8851609414\"\n    },\n    \"order_type\": \"B2C\",\n    \"order_number\": \"test_43219\",\n    \"ref_id\": \"test_12341025\",\n    \"payment_type\": \"prepaid\",\n    \"weight\": 235,\n    \"length\": 17,\n    \"breadth\": 12,\n    \"height\": 8,\n    \"order_amount\": 99,\n    \"items\": [\n        {\n            \"sku\": \"d99922bc 1a37 11ec 9621 0242ac130002\",\n            \"title\": \"TES ALP 60 wellness\",\n            \"price\": 99,\n            \"qty\": \"1\",\n            \"hsn\": \"\"\n        }\n    ],\n    \"extra_info\": {\n        \"dg_order\": true,\n        \"essential_order\": \"N\",\n        \"invoice_value\": \"0.0\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://sourceinfi.ap-south-1.elasticbeanstalk.com/api/v1/shipment",
+							"protocol": "http",
+							"host": [
+								"sourceinfi",
+								"ap-south-1",
+								"elasticbeanstalk",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"shipment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pickup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"courier_id\": \"290\",\n    \"pickup_date\": \"2023-07-21\",\n    \"pickup_time\": \"20:00:00\",\n    \"packets\": 1,\n    \"pickup_location\": \"warehouse_1682582805\",\n    \"extra_info\": {\n        \"location_contact_name\": \"test\",\n        \"location_address_1\": \"test\",\n        \"location_address_2\": \"\",\n        \"location_city\": \"Gurgaon\",\n        \"location_name\": \"Sameer\",\n        \"location_zip\": \"122001\",\n        \"location_phone\": \"0123456789\",\n        \"ref_id\":\"SRTC4089276911\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://sourceinfi.ap-south-1.elasticbeanstalk.com/api/v1/shipment/pickup",
+							"protocol": "http",
+							"host": [
+								"sourceinfi",
+								"ap-south-1",
+								"elasticbeanstalk",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"shipment",
+								"pickup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Track",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"courier_id\": \"289\",\n    \"awb_numbers\": [\"10264091412\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://sourceinfi.ap-south-1.elasticbeanstalk.com/api/v1/shipment/track",
+							"protocol": "http",
+							"host": [
+								"sourceinfi",
+								"ap-south-1",
+								"elasticbeanstalk",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"shipment",
+								"track"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancel",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"courier_id\":\"230\",\r\n    \"awb_number\":\"SHBP7000501082\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://sourceinfi.ap-south-1.elasticbeanstalk.com/api/v1/shipment/cancel",
+							"protocol": "http",
+							"host": [
+								"sourceinfi",
+								"ap-south-1",
+								"elasticbeanstalk",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"shipment",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

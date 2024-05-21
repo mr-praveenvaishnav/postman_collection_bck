@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "bffd2dda-02bc-417b-b97e-d941ef27cfa7",
+		"name": "call_center",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33604064"
+	},
+	"item": [
+		{
+			"name": "lead",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzEzNTA2Nzc5LCJleHAiOjE3MTM1MTAzNzksIm5iZiI6MTcxMzUwNjc3OSwianRpIjoiaEdaMFZGNFJTblpSU1NZcCIsInN1YiI6IjY2MWZhMDk2M2U1MjZkOTI2ODA0Yzc1MiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.J9KfWyWVqciSKikc0MNOPBzdHCe0Qjh6vrzJYVAmhZE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"campaign_id\": \"661fb363badf88d5476af8e3\",\r\n    \"name\": \"Order Lead12\",\r\n    \"mobile_no\": \"8897654411\",\r\n    \"order_id\": \"616d151509961472637d5f96\",\r\n    \"order_date\": \"2021-12-02\",\r\n    \"order_amount\": \"100\",\r\n    \"payment_type\": \"code\",\r\n    \"tags\": \"tags\",\r\n    \"shopify_order_tags\": \"order_tags\",\r\n    \"weight(gm)\": \"100\",\r\n    \"length(cm)\": \"10\",\r\n    \"height(cm)\": \"20\",\r\n    \"breadth(cm)\": \"10\",\r\n    \"ivr_status\": \"pending\",\r\n    \"order_status\": \"success\",\r\n    \"shipping_charges\": \"10\",\r\n    \"tax_amount\": \"50\",\r\n    \"discount\": \"10\",\r\n    \"billing_first_name\": \"demo\",\r\n    \"billing_last_name\": \"demo\",\r\n    \"billing_campainy_name\": \"demo campainy\",\r\n    \"billing_phone_number\": \"8898765411\",\r\n    \"billing_address1\": \"new delhi\",\r\n    \"billing_address2\": \"new delhi\",\r\n    \"billing_city\": \"delhi\",\r\n    \"billing_state\": \"delhi\",\r\n    \"billing_country\": \"india\",\r\n    \"billing_pincode\": \"110096\",\r\n    \"billing_gst_number\": \"182211\",\r\n    \"shipping_first_name\": \"demo\",\r\n    \"shipping_last_name\": \"demo\",\r\n    \"shipping_campainy_name\": \"demo campainy\",\r\n    \"shipping_phone_number\": \"8898765411\",\r\n    \"shipping_address1\": \"new delhi\",\r\n    \"shipping_address2\": \"new delhi\",\r\n    \"shipping_city\": \"delhi\",\r\n    \"shipping_state\": \"delhi\",\r\n    \"shipping_country\": \"india\",\r\n    \"shipping_pincode\": \"110096\",\r\n    \"product_id\": \"616d151509961472637d5f96\",\r\n    \"sku\": \"SKU012\",\r\n    \"product_name\": \"demo product\",\r\n    \"quantity\": \"10\",\r\n    \"price\": \"100\",\r\n    \"product_id1\": \"616d151509961472637d5f96\",\r\n    \"product_name1\": \"demo product1\",\r\n    \"sku1\": \"sku1\",\r\n    \"quantity1\": 2,\r\n    \"price1\": 200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/lead",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"lead"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\":\"praveen@zanzeo.in\",\r\n\"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 2",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

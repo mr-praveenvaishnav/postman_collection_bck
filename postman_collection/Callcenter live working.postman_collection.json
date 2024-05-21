@@ -1,0 +1,348 @@
+{
+	"info": {
+		"_postman_id": "7981b6a2-b723-46d7-b501-af8ae037b7ba",
+		"name": "Callcenter live working",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33604064"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"praveen@zanzeo.in\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8002/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8002",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NDR Lead Creation Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDIvYXBpL2xvZ2luIiwiaWF0IjoxNzEzNzkwMzE2LCJleHAiOjE3MTM3OTM5MTYsIm5iZiI6MTcxMzc5MDMxNiwianRpIjoiVGVjaGxMdXF4SWxvOW9lMiIsInN1YiI6IjY2MWZhMDk2M2U1MjZkOTI2ODA0Yzc1MiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ORxtUcO1yl69mEMdMrvajBG6Rp6uusELEL8M4bdG_hc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"campaign_id\": \"661fb34bbadf88d5476af8e1\",\r\n    \"name\": \"new lead\",\r\n    \"mobile_no\": \"9999998883\",\r\n    \"ndr_date\": \"2024-04-23\",\r\n    \"pickup_date\": \"2024-04-22\",\r\n    \"order_number\": \"123445\",\r\n    \"payment_type\": \"cod\",\r\n    \"order_amount\": \"100\",\r\n    \"courier\": \"bluedart\",\r\n    \"awb_number\": \"ns1234323cs128\",\r\n    \"order_status\": \"success\",\r\n    \"shipping_address\": \"New Delhi\",\r\n    \"shipping_address_2\":\"\",\r\n    \"city\": \"delhi\",\r\n    \"state\": \"delhi\",\r\n    \"pincode\": \"272152\",\r\n    \"last_action_by\": \"courier\",\r\n    \"attempt\": \"2\",\r\n    \"details\": \"details here\",\r\n    \"remark\": \"remark here\",\r\n    \"seller_id\":\"\",\r\n    \"seller_name\":\"\",\r\n    \"seller_company\":\"\",\r\n    \"product_details\": [\r\n        {\r\n            \"product_id\": \"9ddfd33d44543334\",\r\n            \"product_name\": \"test product\",\r\n            \"sku\": \"sku1\",\r\n            \"quantity\": 2,\r\n            \"price\": 100\r\n        },\r\n        {\r\n            \"product_id\": \"9ddfd33d4452wsde\",\r\n            \"product_name\": \"test product2\",\r\n            \"sku\": \"sku2\",\r\n            \"quantity\": 3,\r\n            \"price\": 150\r\n        },\r\n        {\r\n            \"product_id\": \"9ddfd33d445dfss\",\r\n            \"product_name\": \"test product3\",\r\n            \"sku\": \"sku3\",\r\n            \"quantity\": 1,\r\n            \"price\": 190\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8002/api/lead",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8002",
+					"path": [
+						"api",
+						"lead"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NDR Lead update Api Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzEzNzc5NzAwLCJleHAiOjE3MTM3ODMzMDAsIm5iZiI6MTcxMzc3OTcwMCwianRpIjoiaXk5dVNxZzhkMGNldlhibiIsInN1YiI6IjY2MWZhMDk2M2U1MjZkOTI2ODA0Yzc1MiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.17Ej7TovyEAjUEbsefQC5PoieOf2LglWy1XJF-CIffk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"campaign_id\": \"661fb34bbadf88d5476af8e1\",\r\n    \"name\": \"app Lead112\",\r\n    \"status\" : \"Completed\",  \r\n    \"mobile_no\": \"8897654411\",\r\n    \"order_id\": \"616d151509961472637d5f96\",\r\n    \"order_date\": \"2021-12-02\",\r\n    \"order_amount\": \"100\",\r\n    \"payment_type\": \"code\",\r\n    \"tags\": \"tags\",\r\n    \"shopify_order_tags\": \"order_tags\",\r\n    \"weight(gm)\": \"100\",\r\n    \"length(cm)\": \"10\",\r\n    \"height(cm)\": \"20\",\r\n    \"breadth(cm)\": \"10\",\r\n    \"ivr_status\": \"pending\",\r\n    \"order_status\": \"success\",\r\n    \"shipping_charges\": \"10\",\r\n    \"tax_amount\": \"50\",\r\n    \"discount\": \"10\",\r\n    \"billing_details\": {\r\n        \"billing_first_name\": \"demo\",\r\n        \"billing_last_name\": \"demo\",\r\n        \"billing_campainy_name\": \"demo campainy\",\r\n        \"billing_phone_number\": \"8898765411\",\r\n        \"billing_address1\": \"new delhi\",\r\n        \"billing_address2\": \"new delhi\",\r\n        \"billing_city\": \"delhi\",\r\n        \"billing_state\": \"delhi\",\r\n        \"billing_country\": \"india\",\r\n        \"billing_pincode\": \"110096\",\r\n        \"billing_gst_number\": \"182211\"\r\n    },\r\n    \"shipping_details\": {\r\n        \"shipping_first_name\": \"demo\",\r\n        \"shipping_last_name\": \"demo\",\r\n        \"shipping_campainy_name\": \"demo campainy\",\r\n        \"shipping_phone_number\": \"8898765411\",\r\n        \"shipping_address1\": \"new delhi\",\r\n        \"shipping_address2\": \"new delhi\",\r\n        \"shipping_city\": \"delhi\",\r\n        \"shipping_state\": \"delhi\",\r\n        \"shipping_country\": \"india\",\r\n        \"shipping_pincode\": \"110096\"\r\n    },\r\n    \"product_details\": [\r\n        {\r\n            \"product_id\": \"9ddfd33d44543334\",\r\n            \"product_name\": \"test product\",\r\n            \"sku\": \"sku1\",\r\n            \"quantity\": 2,\r\n            \"price\": 100\r\n        },\r\n        {\r\n            \"product_id\": \"343490df343de33\",\r\n            \"product_name\": \"test product 1\",\r\n            \"sku\": \"sku1\",\r\n            \"quantity\": 4,\r\n            \"price\": 200\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:80012/api/lead/updateLeadDetails",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "80012",
+					"path": [
+						"api",
+						"lead",
+						"updateLeadDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Confirmation Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzEzNTEwNTU1LCJleHAiOjE3MTM1MTQxNTUsIm5iZiI6MTcxMzUxMDU1NSwianRpIjoibWF1SE12WGZabVpLdWRMbiIsInN1YiI6IjY2MWZhMDk2M2U1MjZkOTI2ODA0Yzc1MiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.kVrwK5rHSHPiETLTEoW2nrCGBmljtP_w7DPvQLdISzs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n\"campaign_id\"       : \"661fcda22109bc7b22a5042e\", \r\n\"name\"              : \"Order Lead1123\",\r\n\"test\":\"test\",\r\n\"mobile_no\"         :\"8897654444\",\r\n\"order_id\"          : \"616d151509961472637d5f96\",\r\n\"order_date\"        : \"2021-12-02\",\r\n\"order_amount\"      : \"100\",\r\n\"payment_type\"      : \"code\",\r\n\"tags\"              : \"tags\",\r\n\"shopify_order_tags\": \"order_tags\",\r\n \"weight(gm)\"       : \"100\",\r\n\"length(cm)\"       : \"10\",\r\n \"height(cm)\"     : \"20\",\r\n \"breadth(cm)\"      : \"10\",\r\n\"ivr_status\"        : \"pending\",\r\n\"order_status\"      : \"success\",\r\n\"shipping_charges\"  : \"10\",\r\n\"tax_amount\"        : \"50\",\r\n\"discount\"          : \"10\",\r\n\"billing_first_name\": \"demo\",\r\n\"billing_last_name\" : \"demo\",\r\n\"billing_campainy_name\":\"demo campainy\",\r\n\"billing_phone_number\" : \"8898765411\",\r\n\"billing_address1\"     : \"new delhi\",\r\n\"billing_address2\"     : \"new delhi\",\r\n\"billing_city\"         : \"delhi\",\r\n\"billing_state\"       : \"delhi\",\r\n\"billing_country\"      : \"india\",\r\n\"billing_pincode\"      : \"110096\",\r\n\"billing_gst_number\"   :\"182211\",\r\n\"shipping_first_name\"  : \"demo\",\r\n\"shipping_last_name\"   : \"demo\",\r\n\"shipping_campainy_name\" :\"demo campainy\",\r\n\"shipping_phone_number\"  : \"8898765411\",\r\n\"shipping_address1\"      : \"new delhi\",\r\n\"shipping_address2\"      : \"new delhi\",\r\n\"shipping_city\"          : \"delhi\",\r\n\"shipping_state\"        : \"delhi\",\r\n\"shipping_country\"       : \"india\",\r\n\"shipping_pincode\"       : \"110096\",\r\n\"seller_id\":\"\",\r\n\"seller_name\":\"\",\r\n\"seller_company\":\"\",\r\n\"product_details\": [\r\n        {\r\n            \"product_id\": \"9ddfd33d44543334\",\r\n            \"product_name\": \"test product\",\r\n            \"sku\": \"sku1\",\r\n            \"quantity\": 2,\r\n            \"price\": 100\r\n        },\r\n        {\r\n            \"product_id\": \"9ddfd33d4452wsde\",\r\n            \"product_name\": \"test product2\",\r\n            \"sku\": \"sku2\",\r\n            \"quantity\": 3,\r\n            \"price\": 150\r\n        },\r\n        {\r\n            \"product_id\": \"9ddfd33d445dfss\",\r\n            \"product_name\": \"test product3\",\r\n            \"sku\": \"sku3\",\r\n            \"quantity\": 1,\r\n            \"price\": 190\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://call.nimbuspost.com/api/lead",
+					"protocol": "https",
+					"host": [
+						"call",
+						"nimbuspost",
+						"com"
+					],
+					"path": [
+						"api",
+						"lead"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Abandoned Cart Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzEzNTEwNTU1LCJleHAiOjE3MTM1MTQxNTUsIm5iZiI6MTcxMzUxMDU1NSwianRpIjoibWF1SE12WGZabVpLdWRMbiIsInN1YiI6IjY2MWZhMDk2M2U1MjZkOTI2ODA0Yzc1MiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.kVrwK5rHSHPiETLTEoW2nrCGBmljtP_w7DPvQLdISzs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n\"campaign_id\"     : \"661fb363badf88d5476af8e3\", \r\n\"name\"            : \"New Abandoned Lead Api\",\r\n\"testds\":\"testing12333\",\r\n\"mobile_no\"       : \"8897650000\",\r\n\"order_id\"          : \"616d151509961472637d5f96\",\r\n\"order_date\"        : \"2021-12-02\",\r\n\"order_amount\"      : \"100\",\r\n\"payment_type\"      : \"code\",\r\n\"shopify_order_tags\": \"order_tags\",\r\n \"weight(gm)\"       : \"100\",\r\n\"length(cm)\"       : \"10\",\r\n \"height(cm)\"     : \"20\",\r\n \"breadth(cm)\"      : \"10\",\r\n\"ivr_status\"        : \"pending\",\r\n\"order_status\"      : \"success\",\r\n\"shipping_charges\"  : \"10\",\r\n\"tax_amount\"        : \"50\",\r\n\"discount\"          : \"10\",\r\n\"billing_first_name\": \"demo\",\r\n\"seller_id\":\"\",\r\n\"seller_name\":\"\",\r\n\"seller_company\":\"\",\r\n\r\n\"channel\"         : \"oms\",\r\n\"checkout_id\"     : \"618d0938b2276699bc8af7dc\",\r\n\"payment_type\"    : \"cod\",\r\n\"date\"            : \"2021-12-02\",\r\n\"amount\"          : \"100\",\r\n\"first_name\"      : \"demo\",\r\n\"last_name\"       : \"demo\",\r\n\"phone\"           : \"8897654211\",\r\n\"address_1\"       : \"new delhi\",\r\n\"address_2\"       : \"new delhi\",\r\n\"city\"            : \"delhi\",\r\n\"state\"           : \"delhi\",\r\n\"country\"         : \"india\",\r\n\"pincode\"         : \"272152\",\r\n\"recovered\"       : \"1\",\r\n\"checkout_url\"    : \"url\",\r\n\"tags\"            : \"tag\",\r\n\"product_id\"      : \"34232jjd343242fd\",\r\n\"product_name\"    : \"demo product\",\r\n\"sku\"             : \"sku\",\r\n\"quantity\"        : 2,\r\n\"price\"           :200,\r\n\"product_id1\"     : \"34232jjd343242fd\",\r\n\"product_name1\"   : \"demo product\",\r\n\"sku1\"            : \"sku1\",\r\n\"quantity1\"       : 2,\r\n\"price1\"          :200,\r\n\r\n\"product_details\": [\r\n        {\r\n            \"product_id\": \"9ddfd33d44543334\",\r\n            \"product_name\": \"test product\",\r\n            \"sku\": \"sku1\",\r\n            \"quantity\": 2,\r\n            \"price\": 100\r\n        },\r\n        {\r\n            \"product_id\": \"9ddfd33d4452wsde\",\r\n            \"product_name\": \"test product2\",\r\n            \"sku\": \"sku2\",\r\n            \"quantity\": 3,\r\n            \"price\": 150\r\n        },\r\n        {\r\n            \"product_id\": \"9ddfd33d445dfss\",\r\n            \"product_name\": \"test product3\",\r\n            \"sku\": \"sku3\",\r\n            \"quantity\": 1,\r\n            \"price\": 190\r\n        }\r\n    ]\r\n} \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://call.nimbuspost.com/api/lead",
+					"protocol": "https",
+					"host": [
+						"call",
+						"nimbuspost",
+						"com"
+					],
+					"path": [
+						"api",
+						"lead"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Abandoned Cart  update Api Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzEzNDM1MTQyLCJleHAiOjE3MTM0Mzg3NDIsIm5iZiI6MTcxMzQzNTE0MiwianRpIjoiN0QzUEhhV2dJU1UySUpxMCIsInN1YiI6IjY2MWZhMDk2M2U1MjZkOTI2ODA0Yzc1MiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.SANOxuh2It7TVIZHaPTOyTXahZ5XqyPbJY8FRknqa_k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n\"campaign_id\"     : \"661fb363badf88d5476af8e3\", \r\n\"name\"            : \"New Abandoned Lead Api\",\r\n\"testds\":\"testing12333\",\r\n\"status\":true,\r\n\"mobile_no\"       : \"8897653333\",\r\n\"order_id\"          : \"616d151509961472637d5f96\",\r\n\"order_date\"        : \"2021-12-02\",\r\n\"order_amount\"      : \"100\",\r\n\"payment_type\"      : \"code\",\r\n\"shopify_order_tags\": \"order_tags\",\r\n \"weight(gm)\"       : \"100\",\r\n\"length(cm)\"       : \"10\",\r\n \"height(cm)\"     : \"20\",\r\n \"breadth(cm)\"      : \"10\",\r\n\"ivr_status\"        : \"pending\",\r\n\"order_status\"      : \"success\",\r\n\"shipping_charges\"  : \"10\",\r\n\"tax_amount\"        : \"50\",\r\n\"discount\"          : \"10\",\r\n\"billing_first_name\": \"demo\",\r\n\"seller_id\":\"\",\r\n\"seller_name\":\"\",\r\n\"seller_company\":\"\",\r\n\r\n\"channel\"         : \"oms\",\r\n\"checkout_id\"     : \"618d0938b2276699bc8af7dc\",\r\n\"payment_type\"    : \"cod\",\r\n\"date\"            : \"2021-12-02\",\r\n\"amount\"          : \"100\",\r\n\"first_name\"      : \"demo\",\r\n\"last_name\"       : \"demo\",\r\n\"phone\"           : \"8897654211\",\r\n\"address_1\"       : \"new delhi\",\r\n\"address_2\"       : \"new delhi\",\r\n\"city\"            : \"delhi\",\r\n\"state\"           : \"delhi\",\r\n\"country\"         : \"india\",\r\n\"pincode\"         : \"272152\",\r\n\"recovered\"       : \"1\",\r\n\"checkout_url\"    : \"url\",\r\n\"tags\"            : \"tag\",\r\n\"product_id\"      : \"34232jjd343242fd\",\r\n\"product_name\"    : \"demo product\",\r\n\"sku\"             : \"sku\",\r\n\"quantity\"        : 2,\r\n\"price\"           :200,\r\n\"product_id1\"     : \"34232jjd343242fd\",\r\n\"product_name1\"   : \"demo product\",\r\n\"sku1\"            : \"sku1\",\r\n\"quantity1\"       : 2,\r\n\"price1\"          :200,\r\n\r\n\"product_details\": [\r\n        {\r\n            \"product_id\": \"9ddfd33d44543334\",\r\n            \"product_name\": \"test product\",\r\n            \"sku\": \"sku1\",\r\n            \"quantity\": 2,\r\n            \"price\": 100\r\n        },\r\n        {\r\n            \"product_id\": \"9ddfd33d4452wsde\",\r\n            \"product_name\": \"test product2\",\r\n            \"sku\": \"sku2\",\r\n            \"quantity\": 3,\r\n            \"price\": 150\r\n        },\r\n        {\r\n            \"product_id\": \"9ddfd33d445dfss\",\r\n            \"product_name\": \"test product3\",\r\n            \"sku\": \"sku3\",\r\n            \"quantity\": 1,\r\n            \"price\": 190\r\n        }\r\n    ]\r\n} \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/lead/6620fdd29dad8b23ae0842a3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"lead",
+						"6620fdd29dad8b23ae0842a3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Abandoned Cart Details api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NTUzNjA5NSwiZXhwIjoxNjQ1NTM5Njk1LCJuYmYiOjE2NDU1MzYwOTUsImp0aSI6IjFROEphYjhudk9IVHlTQmEiLCJzdWIiOiI2MWE2MmNjNTdhYWQ0OTM4NmMyYzZkNzIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0._b0a28Qc5dnyPjh77-3_K5p7wP2ZL7W2n46TUXg_Lhk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/lead/61e511d06f0c0000e900645b",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"lead",
+						"61e511d06f0c0000e900645b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Confirmation Details Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9jYWxsZXIub3Nwcm8ubGl2ZVwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Njc0MTYwMywiZXhwIjoxNjQ2NzQ1MjAzLCJuYmYiOjE2NDY3NDE2MDMsImp0aSI6ImlaODZqc0Q1b3hlaXBBblIiLCJzdWIiOiI2MjFmMTgxYzE2Y2ZlZjYzMGQwZGFiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.yBpqYu3JDxgXjji-lTCRp_4gfapUUqVLjt2hbvqZjK4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://caller.ospro.live/api/lead/622728771e73b238ff55ce62",
+					"protocol": "http",
+					"host": [
+						"caller",
+						"ospro",
+						"live"
+					],
+					"path": [
+						"api",
+						"lead",
+						"622728771e73b238ff55ce62"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NDR Details Api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2NhbGwubmltYnVzcG9zdC5jb20vYXBpL2xvZ2luIiwiaWF0IjoxNjgxMzg0Njc1LCJleHAiOjE2ODEzODgyNzUsIm5iZiI6MTY4MTM4NDY3NSwianRpIjoiQjMzN25hRW9QNUJSTFpXTiIsInN1YiI6IjYyM2MzMGJjY2FhODNkMWE0NzU4ZDVhMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Lu1oS_6hmVgYIM_Qkb9pPhTpA15lbTv8zXYjiWkTQfc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://call.nimbuspost.com/api/lead/6437e358c03743537b3e8ad0",
+					"protocol": "https",
+					"host": [
+						"call",
+						"nimbuspost",
+						"com"
+					],
+					"path": [
+						"api",
+						"lead",
+						"6437e358c03743537b3e8ad0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

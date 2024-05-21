@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "a882b4b0-ec7c-4068-9a98-df3949417b07",
+		"name": "shopify patner",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33604064"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://techzanzeo.shopify.com/{org_id}/api/2024-04/graphql.json",
+					"protocol": "https",
+					"host": [
+						"techzanzeo",
+						"shopify",
+						"com"
+					],
+					"path": [
+						"{org_id}",
+						"api",
+						"2024-04",
+						"graphql.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Shopify-Access-Token",
+						"value": "46f0eaf0feda006268b744d3ae830aaf-1712576660",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://techzanzeo.shopify.com/admin/api/2024-04/orders.json?status=any",
+					"protocol": "https",
+					"host": [
+						"techzanzeo",
+						"shopify",
+						"com"
+					],
+					"path": [
+						"admin",
+						"api",
+						"2024-04",
+						"orders.json"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "any"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Shopify-Access-Token",
+						"value": "46f0eaf0feda006268b744d3ae830aaf-1712576660",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://admin.shopify.com/store/shopname/api/2023-01/graphql.json",
+					"protocol": "https",
+					"host": [
+						"admin",
+						"shopify",
+						"com"
+					],
+					"path": [
+						"store",
+						"shopname",
+						"api",
+						"2023-01",
+						"graphql.json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
